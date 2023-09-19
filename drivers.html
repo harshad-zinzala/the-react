@@ -1,0 +1,1699 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/drstyle.css ">
+    
+
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+
+</head>
+
+<body>
+    <!-- Header Section Start -->
+    <header class="main-header py-4">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid justify-content-around">
+                <div class="col-lg-3 col-sm-12">
+                    <a class="navbar-brand text-white" href="#">eFleetPass</a>
+                </div>
+                <div class="col-lg-6 col-sm-12">
+                    <form class="d-flex src-form">
+                        <input class="form-control me-2 src-input" type="search"
+                            placeholder="Search Rentals, Vehicles & Drivers...">
+                        <button class="src-btn " type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </form>
+                </div>
+                <div class="col-lg-3 col-sm-12 text-end mt-lg-0 mt-3">
+                    <div class="fawesome text-white">
+                        <i class="far fa-sun mx-3 fs-20"></i>
+                        <i class="fas fa-language mx-3 fs-20"></i>
+                        <i class="far fa-question-circle mx-3 fs-20"></i>
+                        <i class="fas fa-user mx-3 fs-20"></i>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </nav>
+        <div>
+            <div class="text-center mt-lg-5 mt-3 d-flex justify-content-center flex-wrap">
+                <div>
+                    <img src="img/mfa.png" class="mx-lg-5 mx-2">
+                    <div class="text-white fs-10">MFA</div>
+                </div>
+                <div>
+                    <img src="img/rent.png" class="mx-lg-5 mx-2">
+                    <div class="text-white fs-10">eFleetCheck</div>
+                </div>
+                <div>
+                    <img src="img/toll.png" class="mx-lg-5 mx-2">
+                    <div class="text-white fs-10">eFleetTolling</div>
+                </div>
+                <div>
+                    <img src="img/track.png" class="mx-lg-5 mx-2">
+                    <div class="text-white fs-10">eFleetRent</div>
+                </div>
+                <div>
+                    <img src="img/check.png" class="mx-lg-5 mx-2">
+                    <div class="text-white fs-10">eFleetTrack</div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header Section End -->
+    <!-- container start-->
+    <div class="container my-3">
+        <!-- main menu start-->
+        <div class="row menu-row">
+            <div class="col-12 d-flex">
+                <div class="me-4">
+                    <a href="dashboard.html"><img class="me-2" src="img/Dashboard.png" alt="">Dashboard </a>
+                </div>
+                <div class="me-4">
+                    <a href="#"><img class="me-2" src="img/fluent_building.png" alt="">Corporate Rentals </a>
+                </div>
+                <div class="me-4">
+                    <a href="drivers.html"><img class="me-2" src="img/ri_steering-fill.png" alt="">Drivers </a>
+                </div>
+                <div class="me-4">
+                    <a href="#"><img class="me-2" src="img/fluent_vehicle-bus.png" alt="">Vehicles </a>
+                </div>
+                <div class="me-4">
+                    <a href="#"><img class="me-2" src="img/ant-design.png" alt="">Transactions </a>
+                </div>
+                <div class="me-4">
+                    <a href="#"><img class="me-2" src="img/ri_reserved.png" alt="">Reservations </a>
+                </div>
+                <div class="me-4">
+                    <a href="#"><img class="me-2" src="img/List.png" alt="">Statements </a>
+                </div>
+                <div class="me-4">
+                    <a href="#"><img class="me-2" src="img/codicon_graph.png" alt="">Reports </a>
+                </div>
+                <div class="me-4">
+                    <a href="#"><img class="me-2" src="img/fluent_web-asset.png" alt="">Assets </a>
+                </div>
+
+            </div>
+        </div>
+        <!-- main menu end-->
+        <!-- View Driver Notes Start-->
+        <div class="row mt-5 mx-1 align-items-center sub-head-row ">
+            <div class="col-lg-6">
+                <h5>View Driver Notes</h5>
+            </div>
+            <div class="col-lg-6 d-flex my-2 justify-content-end align-items-center" style="flex-direction: row;">
+                <li class="list-group-item"><i class="fa-solid fa-bus blu"></i></li>
+                <li class="list-group-item"><i class="fa-regular fa-pen-to-square blu"></i></li>
+                <li class="list-group-item" id="dropdown-icon"> <i class="fa-solid fa-ellipsis-vertical"></i>
+                    <ul class="dropdown-menu" id="dropdown-list">
+                        <li class="my-1">
+                            <h5>Scan & Verify License</h5>
+                        </li>
+                        <li class="my-1">Verify License (Manual)</li>
+                        <li class="my-1">Credit Check</li>
+                        <li class="my-1">View Statment</li>
+                        <li class="my-1">Send New Credentials</li>
+                    </ul>
+                </li>
+            </div>
+        </div>
+        <!-- View Driver Notes end-->
+    </div>
+    <!--Container end-->
+    <!--profile container start-->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 ">
+                <div class="main-card profile-card">
+                    <div class="card mb-3">
+                        <div class="row g-0">
+                            <div class="col-md-2 text-center">
+                                <img src="img/Rectangle 2905.png" class="img-fluid rounded-start" alt="...">
+
+                            </div>
+                            <div class="col-md-10">
+                                <div>
+                                    <div class="row">
+                                        <div class="row">
+                                            <div class="col-md-2 text-left">
+                                                <h5 class="card-title" style="display: inline-block;">Sam John</h5>
+                                                <p class="card-text"><small>Balance: $0</small></p>
+                                            </div>
+                                            <div class="col-md-3 ">
+                                                <span class="badge rounded-pill btn-primary "
+                                                    style="display: inline-block; color: white !important;">efleet
+                                                    point:5 </span>
+                                                <span class="badge rounded-pill bg-light text-dark"
+                                                    style="border: 1px solid black; border-radius: 10px; padding: 5px 10px;">
+                                                    <i class="fa-solid fa-circle-check me-2"></i>Get Verified</span>
+                                            </div>
+                                            <button type="button" style="width: fit-content; margin: 5px;color: white;"
+                                                class="btn btn-labeled btn-info"><span class="btn-label"><i
+                                                        class="fa-solid fa-circle-plus"></i></span>&nbsp;Add
+                                                Card(Tolling)</button>
+                                            <button type="button" id="pay-button"
+                                                style="width: fit-content; margin: 5px;"
+                                                class="btn btn-labeled btn-success">
+                                                <span class="btn-label"><i
+                                                        class="fa-solid fa-regular fa-money-bills"></i></span>
+                                                &nbsp; Pay Toll Notice
+                                            </button>
+
+
+                                            <button type="button" style="width: fit-content;margin: 5px;"
+                                                class="btn btn-labeled btn-primary active" data-bs-toggle="modal"
+                                                data-bs-target="#exampleModalCenter"><span class="btn-label"><i
+                                                        class="fa-solid fa-regular fa-money-bills"></i></span>
+                                                &nbsp;Manual Charge</button>
+                                            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+                                                aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header"
+                                                            style="border-bottom: 0 none; background-color: #f2fafd;">
+                                                            <h6 class="modal-title" id="exampleModalLongTitle">Charge
+                                                                Driver [Sam John] </h6>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <small>
+                                                                The payment information for RENTAL has not been added
+                                                                yet. Please click the link below to add payment
+                                                                information.
+                                                            </small>
+                                                            <div class="acard"
+                                                                style="display: flex; justify-content: center; align-items: center; margin: 10px;">
+                                                                <button type="button"
+                                                                    class="btn btn-labeled btn-primary active">Add
+                                                                    Card</button>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="modal-footer" style="align-items: center;">
+                                                            <button type="button" class="btn btn-light"
+                                                                data-dismiss="modal"
+                                                                style="align-items: center;">Close</button>
+                                                            <button type="button" class="btn btn-success"
+                                                                style="margin-right: 30%;">Charge Now</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <b>Birthday:</b> july 1991<br>
+                                        <b>Added Date:</b> April 30,2021
+                                    </div>
+                                    <div class="col-md-8 mt-3 d-flex flex-wrap justify-content-lg-between">
+                                        <button type="button" class="btn me-lg-3 me-3 mt-lg-0 mt-2 btn-labeled "
+                                            style="background-color:#E9F5FF;"><span class="btn-label">
+                                                <i class="fa-regular fa-comment-dots"></i></span>&nbsp;Send
+                                            SMS</button>
+                                        <button type="button" class="btn me-lg-3 me-3 mt-lg-0 mt-2 btn-labeled"
+                                            style="background-color:#E9F5FF;"><span class="btn-label">
+                                                <i class="fa-solid fa-headset"></i></span>&nbsp;Charge
+                                            Now</button>
+                                        <button type="button" class="btn me-lg-3 me-3 mt-lg-0 mt-2 btn-labeled"
+                                            style="background-color:#E9F5FF;"><span class="btn-label">
+                                                    <i class="fa-regular fa-credit-card"></i></span>&nbsp;Call
+                                            Customer</button>
+                                        <button type="button" class="btn me-lg-3 me-3 mt-lg-0 mt-2 btn-labeled" data-bs-toggle="modal"
+                                            data-bs-target="#staticBackdrop" style="background-color:#E9F5FF;"><span
+                                                class="btn-label"><i class="fa-solid fa-location-dot"></i></span>&nbsp;My
+                                            Location</button>
+
+
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="staticBackdrop">
+                                            <div class="modal-dialog modal-dialog-centered">
+                                                <div class="modal-content">
+                                                    <img src="img/My Location.png">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--TAb bar Start-->
+                    <div class="row">
+                        <div class="tab tab-btn">
+                            <button class="tablinks active" onclick="openCity(event, 'Personal Details')">Personal
+                                Details</button>
+                            <button class="tablinks" onclick="openCity(event, 'Rental History')">Rental History</button>
+                            <button class="tablinks" onclick="openCity(event, 'Notes')">Notes</button>
+                            <button class="tablinks" onclick="openCity(event, 'subscriptions')">Subscriptions</button>
+                            <button class="tablinks" onclick="openCity(event, 'Notifications')">Notifications</button>
+                            <button class="tablinks" onclick="openCity(event, 'Collection')">Collection</button>
+                            <button class="tablinks" onclick="openCity(event, 'Logbook')">Logbook</button>
+                        </div>
+                    </div>
+                    <!--TAb bar End-->
+                    <!--TAb bar Script Start-->
+                    <script>
+                        function openCity(evt, cityName) {
+                            var i, tabcontent, tablinks;
+                            tabcontent = document.getElementsByClassName("tabcontent");
+                            for (i = 0; i < tabcontent.length; i++) {
+                                tabcontent[i].style.display = "none";
+                            }
+                            tablinks = document.getElementsByClassName("tablinks");
+                            for (i = 0; i < tablinks.length; i++) {
+                                tablinks[i].className = tablinks[i].className.replace(" active", "");
+                            }
+                            document.getElementById(cityName).style.display = "block";
+                            evt.currentTarget.className += " active";
+                        }
+                    </script>
+                    <!--TAb bar Script  Start-->
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+    <!--profile container End-->
+    </div>
+
+    <!--Personal Details Start-->
+    <div class="container tabcontent" id="Personal Details" style="display: block;">
+        <div class="row  sub-head-row mx-2 px-2">
+            <div class="row align-items-center ">
+                <div class="col-lg-6">
+                    <h5>Personal Detalils</h5>
+                </div>
+                <div class="col-lg-6 d-flex my-2 justify-content-end align-items-center" style="flex-direction: row;">
+                    <button type="button" class="btn btn-labeled btn-primary active"><span class="btn-label"><i
+                                class="fa-regular fa-pen-to-square blu" style="color: white;"></i></span>&nbsp;Edit
+                        Profile</button>
+                </div>
+            </div>
+            <div class="row my-4">
+                <div class="col-lg-2">
+                    <p>Email:</p>
+                    <p>Mobile Number:</p>
+                    <p>Alternate Number:</p>
+                    <p>Address:</p>
+                    <p>Driver Licence No:</p>
+                </div>
+                <div class="col-lg-4">
+                    <p class="text-muted"> Not Found</p>
+                    <p class="text-muted"> 041474185</p>
+                    <p class="text-muted"> 0414741852</p>
+                    <p class="text-muted"> Parramatta NSW 2154</p>
+                    <p class="text-muted"> 21874147</p>
+                </div>
+                <div class="col-lg-6">
+                    <p>License Front Picture:</p>
+                    <img src="img/drivers_license_TS 1.png">
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <!--Personal Details End-->
+
+    <!--Rental History Start -->
+    <div class="tabcontent" id="Rental History">
+        <div class="container">
+
+            <div class="row  mx-1 p-3 align-items-center sub-head-row ">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h5>Rental History of Sam John</h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="rental-tab" href="#">Rentals</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="#" id="bookings-tab">Bookings</a>
+                        </li>
+
+
+
+                    </ul>
+
+                </div>
+
+
+            </div>
+        </div>
+        <div class="container" id="rentals-content" style="display: block;">
+            <div class="row my-3 ">
+                <div class="col-lg-4 ">
+                    <div class="main-card3">
+                        <div class="row">
+                            <div class="row my-2">
+                                <div class="col-lg-11">
+                                    <img src="img/sam.png">
+                                    &nbsp;&nbsp;<b>Sam John</b>&nbsp;&nbsp;<span class="badge">Completed</span>
+                                </div>
+                                <div class="col-lg-1 d-flex my-2 justify-content-end align-items-center"
+                                    style="flex-direction: row;">
+                                    <i class="fa-solid fa-file-pdf " style="color:red;"></i>
+                                </div>
+                            </div>
+                            <div class="row mt-4">
+                                <div class="col-lg">
+                                    <p class="n">
+                                    <h6><b>RA #2016-000-39</b></h6>
+                                    </p>
+                                    <p class="n">REGO:&nbsp;<span class="text-muted">BXC30A</span></p>
+                                    <p class="n">Phone&nbsp;<span
+                                            class="text-muted">&nbsp;744&nbsp;564&nbsp;564&nbsp;56</span></p>
+                                    <p class="n">Start Date:&nbsp;<span
+                                            class="text-muted">&nbsp;08/04/2016&nbsp;09:00</span></p>
+                                    <p class="n">End Date:&nbsp;<span
+                                            class="text-muted">&nbsp;08/04/2016&nbsp;09:00</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-lg-4 ">
+                    <div class="main-card3">
+                        <div class="row">
+                            <div class="row my-2">
+                                <div class="col-lg-11">
+                                    <img src="img/sam.png">
+                                    &nbsp;&nbsp;<b>Sam John</b>&nbsp;&nbsp;<span class="badge">Completed</span>
+                                </div>
+                                <div class="col-lg-1 d-flex my-2 justify-content-end align-items-center"
+                                    style="flex-direction: row;">
+                                    <i class="fa-solid fa-file-pdf " style="color:red;"></i>
+                                </div>
+                            </div>
+                            <div class="row mt-4">
+                                <div class="col-lg">
+                                    <p class="n">
+                                    <h6><b>RA #2016-000-39</b></h6>
+                                    </p>
+                                    <p class="n">REGO:&nbsp;<span class="text-muted">BXC30A</span></p>
+                                    <p class="n">Phone&nbsp;<span
+                                            class="text-muted">&nbsp;744&nbsp;564&nbsp;564&nbsp;56</span></p>
+                                    <p class="n">Start Date:&nbsp;<span
+                                            class="text-muted">&nbsp;08/04/2016&nbsp;09:00</span></p>
+                                    <p class="n">End Date:&nbsp;<span
+                                            class="text-muted">&nbsp;08/04/2016&nbsp;09:00</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 ">
+                    <div class="main-card3">
+                        <div class="row">
+                            <div class="row my-2">
+                                <div class="col-lg-11">
+                                    <img src="img/sam.png">
+                                    &nbsp;&nbsp;<b>Sam John</b>&nbsp;&nbsp;<span class="badge">Completed</span>
+                                </div>
+                                <div class="col-lg-1 d-flex my-2 justify-content-end align-items-center"
+                                    style="flex-direction: row;">
+                                    <i class="fa-solid fa-file-pdf " style="color:red;"></i>
+                                </div>
+                            </div>
+                            <div class="row mt-4">
+                                <div class="col-lg">
+                                    <p class="n">
+                                    <h6><b>RA #2016-000-39</b></h6>
+                                    </p>
+                                    <p class="n">REGO:&nbsp;<span class="text-muted">BXC30A</span></p>
+                                    <p class="n">Phone&nbsp;<span
+                                            class="text-muted">&nbsp;744&nbsp;564&nbsp;564&nbsp;56</span></p>
+                                    <p class="n">Start Date:&nbsp;<span
+                                            class="text-muted">&nbsp;08/04/2016&nbsp;09:00</span></p>
+                                    <p class="n">End Date:&nbsp;<span
+                                            class="text-muted">&nbsp;08/04/2016&nbsp;09:00</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container" id="bookings-content" style="display: none;">
+            <div class="row my-3 ">
+                <div class="col-lg-4 ">
+                    <div class="main-card3">
+                        <div class="row">
+                            <div class="row my-2">
+                                <div class="col-lg-11">
+                                    <img src="img/sam.png">
+                                    &nbsp;&nbsp;<b>Sam John</b>&nbsp;&nbsp;<span class="badge">Completed</span>
+                                </div>
+                                <div class="col-lg-1 d-flex my-2 justify-content-end align-items-center"
+                                    style="flex-direction: row;">
+                                    <i class="fa-solid fa-file-pdf " style="color:red;"></i>
+                                </div>
+                            </div>
+                            <div class="row mt-4">
+                                <div class="col-lg">
+                                    <p class="n">
+                                    <h6><b>RA #2016-000-39</b></h6>
+                                    </p>
+                                    <p class="n">Start Date:&nbsp;<span
+                                            class="text-muted">&nbsp;08/04/2016&nbsp;09:00</span></p>
+                                    <p class="n">End Date:&nbsp;<span
+                                            class="text-muted">&nbsp;08/04/2016&nbsp;09:00</span>
+                                    </p>
+                                    <p class="n">Category/Subscription:&nbsp;<span
+                                            class="text-muted">&nbsp;N/A&nbsp;</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-lg-4 ">
+                    <div class="main-card3">
+                        <div class="row">
+                            <div class="row my-2">
+                                <div class="col-lg-11">
+                                    <img src="img/sam.png">
+                                    &nbsp;&nbsp;<b>Sam John</b>&nbsp;&nbsp;<span class="badge">Completed</span>
+                                </div>
+                                <div class="col-lg-1 d-flex my-2 justify-content-end align-items-center"
+                                    style="flex-direction: row;">
+                                    <i class="fa-solid fa-file-pdf " style="color:red;"></i>
+                                </div>
+                            </div>
+                            <div class="row mt-4">
+                                <div class="col-lg">
+                                    <p class="n">
+                                    <h6><b>RA #2016-000-39</b></h6>
+                                    </p>
+                                    <p class="n">Start Date:&nbsp;<span
+                                            class="text-muted">&nbsp;08/04/2016&nbsp;09:00</span></p>
+                                    <p class="n">End Date:&nbsp;<span
+                                            class="text-muted">&nbsp;08/04/2016&nbsp;09:00</span>
+                                    </p>
+                                    <p class="n">Category/Subscription:&nbsp;<span
+                                            class="text-muted">&nbsp;N/A&nbsp;</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 ">
+                    <div class="main-card3">
+                        <div class="row">
+                            <div class="row my-2">
+                                <div class="col-lg-11">
+                                    <img src="img/sam.png">
+                                    &nbsp;&nbsp;<b>Sam John</b>&nbsp;&nbsp;<span class="badge">Completed</span>
+                                </div>
+                                <div class="col-lg-1 d-flex my-2 justify-content-end align-items-center"
+                                    style="flex-direction: row;">
+                                    <i class="fa-solid fa-file-pdf " style="color:red;"></i>
+                                </div>
+                            </div>
+                            <div class="row mt-4">
+                                <div class="col-lg">
+                                    <p class="n">
+                                    <h6><b>RA #2016-000-39</b></h6>
+                                    </p>
+                                    <p class="n">Start Date:&nbsp;<span
+                                            class="text-muted">&nbsp;08/04/2016&nbsp;09:00</span></p>
+                                    <p class="n">End Date:&nbsp;<span
+                                            class="text-muted">&nbsp;08/04/2016&nbsp;09:00</span>
+                                    </p>
+                                    <p class="n">Category/Subscription:&nbsp;<span
+                                            class="text-muted">&nbsp;N/A&nbsp;</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Rental History End -->
+
+    <!--Notes Start-->
+    <div class="container tabcontent rounded-4" id="Notes">
+
+         <div class="row my-4 sub-head-row mx-2">
+
+             <div class="nn ">
+
+                 <div class="col-lg-12 ">
+
+                    <div class="notes_area row ">
+
+                         <div class="col-lg-6 d-flex align-items-left">
+
+                            <h5><b>Notes</b> </h5>
+
+                             </div>
+
+                        
+
+                         <div class=" col-lg-6 justify-content-end mr-3">
+
+                            <span class="fa fa-star checked"></span>
+
+                             <span class="fa fa-star checked"></span>
+
+                            <span class="fa fa-star checked"></span>
+
+                             <span class="fa fa-star checked"></span>
+
+                            <span class="fa fa-star checked"></span>
+
+                             </div>
+
+                        </div>
+
+                     <div class="d-lg-flex mt-2">
+
+                        <div class="col-lg-6">
+
+                           <label for="exampleFormControlTextarea1"
+                                class="form-label">Driver Notes</label>
+
+                           <textarea class="form-control" id="exampleFormControlTextarea1"
+                                rows="5"></textarea>
+
+
+
+
+                            </div>
+
+
+
+                       <div class="col-lg-6 upload ">
+
+                            <form>
+
+                                 <div class="row">
+
+                                     <div
+                                        class="justify-content-center m-4 col-lg-3 ">
+
+                                         <label for="img"
+                                            class="btn-lg btn-info " style="color: white;">Upload</label>
+
+                                         <input type="file" id="img"
+                                            style="display:none">
+
+                                       </div>
+
+                                     <div class="col-lg mt-1">
+
+                                        <span
+                                            style="margin-left: 10px;"><b>Attach a File</b></span>
+
+                                        <br>
+
+                                       <span style="font-size: 14px;">You can
+                                            Upload PDF,DOC,DOCX,PNG,JPG or JPEG file.</span>
+
+                                        <br>
+
+                                        <span style="font-size: 14px;">File must
+                                            not exceed 200MB</span>
+
+                                        </div>
+
+                                    </div>
+
+                                 </form>
+
+                             </div>
+
+                         </div>
+
+
+
+
+
+                     </div>
+
+               
+
+                 <div class="row mt-4">
+
+                    <div class="col-lg d-grid">
+
+                         <button type="button" class="btn btn-dark btn-block">Not a Rental
+                            Contract</button>
+
+                        </div>
+
+                    <div class="col-lg-7 d-grid">
+
+                        
+
+                         </div>
+
+                    <div class="col-lg-1 d-grid">
+
+                        <button type="button" class="btn btn-danger btn-block">Reset</button>
+
+                        </div>
+
+                     <div class="col-lg-1 d-grid">
+
+                       <button type="button" class="btn btn-primary btn-block">Save</button>
+
+                         </div>
+
+                    </div>
+
+                 </div>
+
+             </div>
+
+    </div>
+    <!--Notes End-->
+
+    <!--Subscription -->
+    <div class="container tabcontent" id="subscriptions">
+        <div class="row sub-head-row p-3">
+            <div class=" mt-3 col-lg-12 col-sm-12 ">
+                <div class="pb-0 ">
+
+                    <div class="col-lg-8 mb-3 d-flex align-items-center">
+
+                        <h5>Subscription of Sam John </h5>
+                    </div>
+                    <ul class="nav nav-tabs ">
+                        <li class="nav-item">
+                            <a class="nav-link  border-primary border-top-0 border-start-0 border-end-0 me-4"
+                                href="#">Overview</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active border-0 mx-4" href="#">Invoices</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active border-0 mx-4" href="#">Customer</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active border-0 mx-4 " href="#">History</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6 col-lg-6 notification-div">
+
+                <div class="row mt-3 p-3 border-0 " id="n1">Notifications
+                </div>
+                <div class="row p-3  notification-row" id="n2">
+                    <div class="alert " role="alert">
+                        <div class="row align-items-center">
+                            <div class="col-lg-1 col-1 row-cols-sm-3">
+                        <i class="fa-regular fa-circle-xmark me-2 text-danger not-icn"></i></div>
+                        <div class="col-lg-8 col-7"><strong><span class="text-danger ">Payment
+                                Failure!</span></strong>
+                        <br>Please check your payment method.</span></div>
+                        <div class="col-lg-3 col-4  "><button type="button" class="btn  border-danger text-danger px-3 py-2">Fix Now</button></div>
+                    </div> </div>
+                </div>
+                <div class="row mt-0 p-3  notification-row" id="n2">
+                    <div class="alert " role="alert">
+                        <div class="row align-items-center">
+                            <div class="col-lg-1 col-1 row-cols-sm-3">
+                                <i class="fa-solid fa-circle-exclamation bg-white text-warning not-icn"></i></div>
+                        <div class="col-lg-8 col-7 "><strong><span class="text-warning">Crash Detected!</span></strong>
+                            <br>We detected a crashed vehicle.</span></div>
+                        <div class="col-lg-3 col-4  "><button type="button" class="btn  border-warning text-warning px-2 py-2">Call Now</button></div>
+                    </div> </div>
+                </div>
+                <div class="row mt-0 p-3  notification-row" id="n2">
+                    <div class="alert " role="alert">
+                        <div class="row align-items-center">
+                            <div class="col-lg-1 col-1 row-cols-sm-3">
+                                <i class="fa-solid fa-circle-exclamation bg-white text-warning not-icn"></i></div>
+                        <div class="col-lg-8 col-7 "><strong><span class="text-primary">Missing Contact Number!</span></strong>
+                            <br>Please fill up the missing contact detail.</span></div>
+                        <div class="col-lg-3 col-4 "><button type="button" class="btn  border-primary text-primary px-1 py-2">Check Now</button></div>
+                    </div> </div>
+                </div> 
+            
+
+                <div class="row mt-3">
+                    <div class="main-card ">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <span class="text-start">
+                                        <h5>My Plan</h5>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="row mt-5">
+                                <div class="col-lg-6">
+                                    <button type="button"
+                                        class="btn border-warning btn-warning text-light me-2">Active</button>
+                                    <strong>Plan</strong>
+                                </div>
+                            </div>
+                            <div class="row mt-5">
+                                <div class="mb-3">
+                                    <h5 class="fs-35"><sup>$</sup>25<sub>/month</sub> </h5>
+                                
+                                </div>
+                                <div>
+                                    <a class="btn-grade">
+                                        Upgrade Plan
+                                    </a>
+                                    <a class="btn-mng">
+                                        Manage Payments
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt-3">
+                    <div class="main-card ">
+                        <div class="container">
+                            <div class="row align-items-start">
+
+                                <ul class="card-details">
+                                    <li><b>Subscription Charges</b></li>
+                                    <table>
+                                        <tr>
+                                            <th>
+                                                <div class=" text-muted mt-5 " aria-rowspan="2">Details
+                                                </div>
+                                            </th>
+                                            <th>
+                                                <div class="text-muted mt-5 ms-5">Weekly</div>
+                                            </th>
+                                            <th>
+                                                <div class="text-muted mt-5 ms-5">Qty</div>
+                                            </th>
+                                            <th>
+                                                <div class="text-muted mt-5 ms-5">Total</div>
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="text-muted mt-5 ">Car Fee</div>
+                                            </td>
+                                            <td>
+                                                <div class="text-muted mt-5 ms-5 ">$20</div>
+                                            </td>
+                                            <td>
+                                                <div class="text-muted mt-5 ms-5">1</div>
+                                            </td>
+                                            <td>
+                                                <div class="text-muted mt-5 ms-5">$20.00</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="text-muted mt-5 ">Insurance</div>
+                                            </td>
+                                            <td>
+                                                <div class="text-muted mt-5 ms-5 ">$100</div>
+                                            </td>
+                                            <td>
+                                                <div class="text-muted mt-5 ms-5">1</div>
+                                            </td>
+                                            <td>
+                                                <div class="text-muted mt-5 ms-5">$100.00</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="text-muted mt-5 "></div>
+                                            </td>
+                                            <td>
+                                                <div class="text-muted mt-5 h6 ms-5 ">SUB TOTAL:</div>
+                                            </td>
+                                            <td>
+                                                <div class="text-muted mt-5 ms-5"></div>
+                                            </td>
+                                            <td>
+                                                <div class="text-dark mt-5 ms-5 h6 strong">$120.00</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="text-muted "></div>
+                                            </td>
+                                            <td>
+                                                <div class="text-muted h6 ms-5">TAX (GST 10% INCL):</div>
+                                            </td>
+                                            <td>
+                                                <div class="text-muted ms-5"></div>
+                                            </td>
+                                            <td>
+                                                <div class="text-dark ms-5 h6 strong">$14.00</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="text-muted "></div>
+                                            </td>
+                                            <td>
+                                                <div class=" h4 mt-5 ms-3"><strong>WEEKLY TOTAL:</strong>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="text-muted ms-5"></div>
+                                            </td>
+                                            <td>
+                                                <div class="text-success ms-3 mt-5 h4">
+                                                    <strong>$134.00</strong>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <div class="row mt-3">
+                                        <div class="row-cols-5">
+
+                                        </div>
+                                    </div>
+                            </div>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt-3">
+                    <div class="main-card mb-5">
+                        <h5><strong> Payment Method </strong></h5>
+                        <br>
+                        <img src="img\card-image.png" alt="mastercard" class="rounded mx-auto d-block mb-3">
+
+                        <ul type="none">
+                            <li class="d-flex align-items-center"> <img src="img\img-mst.jpeg" class="rounded mb-2">
+                                <div class="ms-2"><span>**** **** **** 9978 Mastercard</span>
+                                    <p><b>$482.00</b></p></div>
+                                
+                            </li>
+                            <hr>
+                            <li class="d-flex align-items-center"> <img src="img\img-vsa.jpeg" class="rounded mb-2">
+                                <div class="ms-2"><span>**** **** **** 9978 Mastercard</span>
+                                    <p><b>$482.00</b></p></div>
+                                
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-6">
+                <div class="main-card  mt-3">
+                    <div class="card-body" style="max-width: 540px;">
+                        <div class="row g-0">
+                            <div class="col-md-6" id="i1">
+                                <img src="img\White-Tesla-Model-S-PNG-File 2.png" class="img-fluid rounded-start"
+                                    alt="...">
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card-body">
+                                    <h5 class="card-title">Tesla Model-Y</h5>
+                                    <p class="card-text">Make Model:<small class="text-muted"> 2014</small>
+                                        <br> Registered State:<small class="text-muted"> NSW</small><br>
+                                        Color: <small class="text-muted">White</small>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-3 row-cols-1 row-cols-sm-3 g-1">
+                    <div class="col ">
+                        <div class="card img-thumbnail border-0">
+                            <div class="percent">
+                                <svg id="c1">
+                                    <circle cx="90" cy="90" r="60"></circle>
+                                    <circle cx="90" cy="90" r="60" style="--percent: 50"></circle>
+                                </svg>
+                                <div class="number d-flex">
+                                    <span class="text-danger h4">8000
+                                        <div class=" text-muted mt-2 text-center">RPM</div>
+                                    </span>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col ">
+                        <div class="card img-thumbnail border-0">
+                            <div class="percent">
+                                <svg id="c2">
+                                    <circle cx="90" cy="90" r="60"></circle>
+                                    <circle cx="90" cy="90" r="60" style="--percent: 30"></circle>
+                                </svg>
+                                <div class="number d-flex">
+                                    <h4>
+                                        <div class="text-primary text-center">50</div>
+                                        <div class="text-muted mt-2 text-center">Km/h
+                                    </h4>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col ">
+                        <div class="card img-thumbnail border-0">
+                            <div class="percent">
+                                <svg id="c3">
+                                    <circle cx="90" cy="90" r="60"></circle>
+                                    <circle cx="90" cy="90" r="60" style="--percent: 35"></circle>
+                                </svg>
+                                <div class="number d-flex">
+                                    <h4><span class="text-success">60%</span>
+                                        <div class="text-muted mt-2 text-center">Fuel</span>
+                                    </h4>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="main-card mt-3">
+                    <div class="card-body">
+                        <div class="row g-0">
+                            <div class="col">
+                                <h6><strong>Swap Subscription Vehicle</strong></h6>
+                                <div class="strong text-dark h6 mt-3">Tesla is not currently entitled to a
+                                    free swap.</div>
+                                <div class="text-dark">A new agreement will be generated if you select to
+                                    swap their subscription vehicle.</div>
+                                <div class="mt-3  h6  "><strong>Current vehicle</strong>
+
+                                    <div class="card mt-5 mb-3 border-0" style="max-width: 540px;">
+                                        <div class="row g-0">
+                                            <div class="col-md-4">
+                                                <img src="img\White-Tesla-Model-S-PNG-File 2.png"
+                                                    class="img-fluid rounded-start" alt="...">
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div class="card-body">
+                                                    <div>
+                                                        <h5 class="card-title">Tesla - Model Y<span
+                                                                class="badge bg-info text-light ms-3 display-6 ">SUBSCRIBED</span>
+                                                        </h5>
+                                                    </div>
+                                                    <ul type="none" class="card-details">
+                                                        <li class="mt-3">Make Model: <span
+                                                                class="text-muted">2014</span></li>
+                                                        <li class="mt-2">Registered State: <span
+                                                                class="text-muted">NSW</span></li>
+                                                        <li class="mt-2">Color: <span
+                                                                class="text-muted">White</span></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="mt-3  h6 "><strong>Swap to</strong>
+                                    <div class="card mt-5 mb-3 border-0" style="max-width: 540px;">
+                                        <div class="row g-0">
+                                            <div class="col-md-4">
+                                                <img src="img\car full img.png" class="img-fluid rounded-start "
+                                                    width="200" alt="...">
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div class="card-body">
+                                                    <div>
+                                                        <h5 class="card-title">Range Rover Sport</h5>
+                                                    </div>
+                                                    <ul type="none" class="card-details">
+                                                        <li class="mt-3">Make Model: <span
+                                                                class="text-muted">2020</span></li>
+                                                        <li class="mt-2">Registered State: <span
+                                                                class="text-muted">NSW</span></li>
+                                                        <li class="mt-2">Color: <span class="text-muted">Metallic
+                                                                black</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mt-3  h6 text-center"><strong>No Swap Fee + $0 per week</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                    <div class="main-card ms-3 mt-3">
+                        <div class="card-body">
+                            <div class="row g-0">
+                                <div class="col">
+                                    <h5><strong> Subscription </strong><span class="badge ms-2 ">Active</span></h5>
+                                    <ul type="none" class="card-details">
+                                        <li class="mt-3">Name: <span class="text-muted">BXC30A</span></li>
+                                        <li class="mt-2">Security Deposit: <span class="text-muted">$600.00</span>
+                                        </li>
+                                        <li class="mt-2">Maximum Distance: <span class="text-muted">400
+                                                Km</span></li>
+                                        <li class="mt-2">Start Date: <span class="text-muted">08/04/2016
+                                                09:00 AM</span></li>
+                                        <li class="mt-2">End Date: <span class="text-muted ">08/04/2024
+                                                09:00 AM</span></li>
+                                        <div class="pt-4">
+                                            <h6> Contract Signed on 07/04/2016 11:00 PM
+                                        </div>
+                                        </h5>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 mt-3 mb-5 ms-3 main-card">
+                        <div>
+                            <h5><strong> History </strong></h5>
+
+                        </div>
+                        <div class="row align-items-center mt-2">
+                            <div class="col-3 text-right">
+                                <p>January 10, 2022</p>
+                                <p>12:09 PM</p>
+                            </div>
+                            <div class="col-1">
+                                <div class="history-dot"></div>
+                            </div>
+                            <div class="col-8">
+                                <h4>Invoice Paid</h4>
+                                <p>Paid $120.00 billed as Invoive #123900</p>
+                            </div>
+                        </div>
+
+                        <div class="row align-items-center mt-2">
+                            <div class="col-3 text-right">
+                                <p>January 10, 2022</p>
+                                <p>12:09 PM</p>
+                            </div>
+                            <div class="col-1">
+                                <div class="history-dot"></div>
+                            </div>
+                            <div class="col-8">
+                                <h4>Invoice Paid</h4>
+                                <p>Paid $120.00 billed as Invoive #123900</p>
+                            </div>
+                        </div>
+
+                        <div class="row align-items-center mt-2">
+                            <div class="col-3 text-right">
+                                <p>January 10, 2022</p>
+                                <p>12:09 PM</p>
+                            </div>
+                            <div class="col-1">
+                                <div class="history-dot"></div>
+                            </div>
+                            <div class="col-8">
+                                <h4>Invoice Paid</h4>
+                                <p>Paid $120.00 billed as Invoive #123900</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Subscription End-->
+
+    <!--Notifications Start -->
+    <div class="container tabcontent" id="Notifications">
+        <div class="row my-2 mx-1 align-items-center sub-head-row-2  ">
+            <div class="col-lg-6">
+                <h5><b>All SMS sent to Sam John</b></h5>
+            </div>
+            <div class="col-lg-6 d-flex justify-content-end align-items-center">
+                <div class="form-group has-search">
+                    <span class="fa fa-search form-control-feedback"></span>
+                    <input type="text" class="form-control" placeholder="Search....">
+                </div>
+                <div class="col-lg-3 d-flex justify-content-end">
+                    <h8 class="text-muted"><b>Total Cost: $0</b></h8>
+                </div>
+            </div>
+        </div>
+        <div class="row my-4 ">
+            <div class="col-lg-4 ">
+                <div class="main-card">
+                    <div class="row" style="width: 25rem;">
+                        <div class="col-lg-25">
+                            <div class="card-body">
+                                <p class="card-text">Lorem ipsum dolor sit amet,consecutur adipiscing elit.Est hac
+                                    non scelerisque mi,nibh.Nisl metus,telllus egestas sem erat pellentesque turpis
+                                    semper pharetra.</p>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>Dec 21,2022</b></h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 ">
+                <div class="main-card">
+                    <div class="row" style="width: 25rem;">
+                        <div class="col-lg-25">
+                            <div class="card-body">
+                                <p class="card-text">Lorem ipsum dolor sit amet,consecutur adipiscing elit.Est hac
+                                    non scelerisque mi,nibh.Nisl metus,telllus egestas sem erat pellentesque turpis
+                                    semper pharetra.</p>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>Dec 21,2022</b></h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 ">
+                <div class="main-card">
+                    <div class="row" style="width: 25rem;">
+                        <div class="col-lg-25">
+                            <div class="card-body">
+                                <p class="card-text">Lorem ipsum dolor sit amet,consecutur adipiscing elit.Est hac
+                                    non scelerisque mi,nibh.Nisl metus,telllus egestas sem erat pellentesque turpis
+                                    semper pharetra.</p>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>Dec 21,2022</b></h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Notifications End-->
+
+    <!--Collection Start -->
+    <div class="container tabcontent" id="Collection">
+        <div class="row">
+            <div class="col-lg-12 ">
+                <div class="main-card">
+                    <div class="row">
+                        <div class="col-lg-6 d-flex align-items-left">
+                            <h5>Driver Collection Notes <span class="badge"></span></h5>
+                        </div>
+                        <div class="col-lg-6 flex justify-content-end text-right ">
+                            <button type="button" class="btn btn-danger" id="recordAccidentClaimBtn" style="margin-bottom: 20px;">Record Accident
+                                Claim</button>
+                            <div style="width: 20px;"></div>
+                            <button type="button" class="btn btn-success" style="margin-bottom: 20px;">Download
+                                Authority Form</button>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-6 ">
+                                <label for="exampleFormControlTextarea1" class="form-label">Driver Notes</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+
+
+                            </div>
+                            <div class="col-lg-6"
+                                style="border: 3px dashed lightblue; margin-top: 30px; width: 615px; height: 100px;display: flex; align-items: center; ">
+                                <form>
+                                    <div class="form-group">
+
+                                        <label for="img" class="btn btn-info">Upload</label>
+                                        <span style="margin-left: 10px;"><b>Attach a File</b></span>
+                                        <br>
+                                        <span style="margin-left: 100px; font-size: 14px;">You can Upload
+                                            PDF,DOC,DOCX,PNG,JPG or JPEG file.</span>
+                                        <br>
+                                        <span style="margin-left: 100px; font-size: 14px;">File must not exceed
+                                            200MB</span>
+                                        <input type="file" id="img" style="display:none">
+
+
+                                    </div>
+                                </form>
+
+
+                            </div>
+
+
+
+                        </div>
+
+
+
+                    </div>
+                    <div class="row">
+                        <div class="col-lg d-grid">
+                            <div class="input-group mb-3">
+
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">Damage Claim amount</label>
+
+                                    <label class="visually-hidden" for="autoSizingInputGroup">Username</label>
+
+                                    <div class="input-group">
+                                        <div class="input-group-text">$</div>
+                                        <input type="text" class="form-control" id="exampleInputEmail1">
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                        <div class="col-lg-7 d-grid">
+
+                        
+
+                        </div>
+
+                   <div class="col-lg-1 d-flex align-items-center">
+
+                       <button type="button" class="btn btn-danger btn-block">Reset</button>
+
+                       </div>
+
+                    <div class="col-lg-1 d-flex align-items-center ">
+
+                      <button type="button" class="btn btn-primary btn-block">Save</button>
+
+                        </div>
+
+                   </div>
+                    </div>
+                    <div class="row mt-3">
+
+
+                    </div>
+                </div>
+            </div>
+            <!-- repoAccClaim Start-->
+            <div class="repoAccClaim" id="codeDisplay" style="display: none;">
+                <h5>Report Accident Claim</h5>
+                <form>
+                    <div class="row g-3">
+                        <div class="col-md-4">
+                            <label for="dable" class="form-label">Driveable:</label>
+                            <select class="form-control" id="dable">
+                                <option selected>Choose...</option>
+                                <option value="1">Yes</option>
+                                <option value="2">No</option>
+                              </select>
+                        </div>
+
+                        <div class="col-md-4">
+                            
+                              <div class="form-group">
+                                <label for="selRen" class="form-label">Select Rental:</label>
+                                 <select class="form-control" id="selRen">
+                                <option selected>Select customer</option>
+                                <option value="1">Yes</option>
+                                <option value="2">No</option>
+                              </select>
+                                 
+                              </div>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="opname" class="form-label">Other Party Name:</label>
+                            <input type="text" class="form-control" id="opname" placeholder="e.g.12345">
+                        </div>
+                      </div>
+
+                      <div class="row g-3">
+                        
+                        <div class="col-md-4">
+                            <label for="opAddress" class="form-label">Other Party Address:</label>
+                            <input type="text" class="form-control" id="opAddress" placeholder="e.g.12345">
+                        </div>
+
+                        <div class="col-md-4">
+                            <label for="oplnumber" class="form-label">Other Party License Number:</label>
+                            <input type="text" class="form-control" id="oplnumber" placeholder="e.g.12345">
+                        </div>
+
+                        <div class="col-md-4">
+                            <label for="oprnumber" class="form-label">Other Party Rego Number:</label>
+                            <input type="text" class="form-control" id="oprnumber" placeholder="e.g.12345">
+                        </div>
+                      </div>
+
+                      <div class="row g-3">
+                        
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="opiCompany" class="form-label">Other Party Insurance Company:</label>
+                                 <select class="form-control" id="opiCompany">
+                                <option selected>Select customer</option>
+                                <option value="1">Yes</option>
+                                <option value="2">No</option>
+                              </select>
+                                 
+                              </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <label for="clNumber" class="form-label">Claim Number:</label>
+                            <input type="text" class="form-control" id="clNumber" placeholder="e.g.12345">
+                        </div>
+
+                        <div class="col-md-4">
+                            <label for="doAccident" class="form-label">Date of Accident:</label>
+                            <input type="date" class="form-control" id="doAccident" placeholder="e.g.12345">
+                        </div>
+                      </div>
+
+                      <div class="row g-3">
+                        
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="porNumber" class="form-label">Policy Report Number:</label>
+                                 <select class="form-control" id="porNumber">
+                                <option selected>Select customer</option>
+                                <option value="1">Yes</option>
+                                <option value="2">No</option>
+                              </select>
+                                 
+                              </div>
+                        </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label for="desAccident" class="form-label">Accident Description:</label>
+                            <textarea rows="4" class="form-control" id="desAccident">Accident Description
+                            </textarea>
+                            </div>
+                        </div>
+                        <div class="row g-3">
+                                <div class="col-md-4" style="border: 3px dashed lightblue; display: inline; align-items: center; ">
+                                    <div class="form-group" style="margin: 6px;">
+                                    <label for="img" class="btn btn-info">Upload</label>
+                                    <span style="margin-left: 2px;"><b>Attach a File</b></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-4" style="border: 3px dashed lightblue; display: inline; align-items: center; ">
+                                    <div class="form-group" style="margin: 5px;">
+                                    <label for="img" class="btn btn-info">Upload</label>
+                                    <span style="margin-left: 2px;"><b>Attach a File</b></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-4" style="border: 3px dashed lightblue; display: inline; align-items: center; ">
+                                    <div class="form-group" style="margin: 5px;">
+                                    <label for="img" class="btn btn-info">Upload</label>
+                                    <span style="margin-left: 2px;"><b>Attach a File</b></span>
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="row g-3">
+                            <div class="col-md-4" style="border: 3px dashed lightblue; display: inline; align-items: center; ">
+                                <div class="form-group" style="margin: 5px;">
+                                <label for="img" class="btn btn-info">Upload</label>
+                                <span style="margin-left: 2px;"><b>Attach a File</b></span>
+                                </div>
+                            </div>
+                            <div class="col-md-4" style="border: 3px dashed lightblue; display: inline; align-items: center; ">
+                                <div class="form-group" style="margin: 5px;">
+                                <label for="img" class="btn btn-info">Upload</label>
+                                <span style="margin-left: 2px;"><b>Attach a File</b></span>
+                                </div>
+                            </div>
+                    </div>
+
+                    <div class="flex justify-content-end text-right ">
+                        <button type="submit" class="btn btn-success" style="margin-bottom: 20px;background-color:#1202fa;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                            <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
+                          </svg> Confirm Deatails</button>
+                    </div>
+                  </form>
+            </div>
+            <!-- repoAccClaim End-->
+        </div>
+    </div>
+    <!--Collection End -->
+   
+    <!--Logbook Start-->
+    <div class="container tabcontent" id="Logbook">
+        <div class="row">
+            <div class="row">
+            <div class="col-lg-6 ml-8">
+                <div class="main-card">
+                    <div class="row">
+                        <div class="col-lg-8 d-flex align-items-center">
+                            <h5>ENX04M(#54566) <span class="badge"></span></h5>
+                            <span class="icon-holder">
+                                <i class="fa fa-map-marker-alt" style="color: blue;"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="card mb-3">
+                        <div class="row g-0">
+                            <div class="col-md-4 d-flex align-items-center custom-container">
+                                <img src="img/White-Tesla-Model-S-PNG-File 2.png" class="img-fluid rounded-start"
+                                    alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <ul class="card-body">
+                                    <li><b class="font-size-b">Trip Start Date:</b> <span
+                                            class="font-size-text">2021-06-17 10:03:40</span></li>
+                                    <li><b class="font-size-b">Trip End Date:</b> <span class="font-size-text">
+                                            2021-06-17 10:11:41</span></li>
+                                    <li><b class="font-size-b">FBT Start ODO:</b> <span class="font-size-text">
+                                            40143</span></li>
+                                    <li><b class="font-size-b">FBT End ODO:</b> <span class="font-size-text">
+                                            42206</span></li>
+                                    <li><b class="font-size-b">Trip Reason:</b> <span class="font-size-text">
+                                            1009</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 ">
+                <div class="main-card">
+                    <div class="row">
+                        <div class="col-lg-8 d-flex align-items-center">
+
+                            <h5>ENX04M(#54566)<span class="badge"></span></h5>
+                            <span class="icon-holder">
+                                <i class="fa fa-map-marker-alt" style="color: blue;"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="card mb-3">
+                        <div class="row g-0">
+                            <div class="col-md-4 d-flex align-items-center custom-container">
+                                <img src="img/White-Tesla-Model-S-PNG-File 2.png" class="img-fluid rounded-start"
+                                    alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <ul class="card-body">
+                                    <li><b class="font-size-b">Trip Start Date:</b> <span
+                                            class="font-size-text">2021-06-17 10:03:40</span></li>
+                                    <li><b class="font-size-b">Trip End Date:</b> <span class="font-size-text">
+                                            2021-06-17 10:11:41</span></li>
+                                    <li><b class="font-size-b">FBT Start ODO:</b> <span class="font-size-text">
+                                            40143</span></li>
+                                    <li><b class="font-size-b">FBT End ODO:</b> <span class="font-size-text">
+                                            42206</span></li>
+                                    <li><b class="font-size-b">Trip Reason:</b> <span class="font-size-text">
+                                            1009</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+            <div class="row mt-4">
+                <div class="col-lg-6">
+                    <div class="main-card">
+                        <div class="row">
+                            <div class="col-lg-8 d-flex align-items-center">
+
+                                <h5>ENX04M(#54566)<span class="badge"></span></h5>
+                                <span class="icon-holder1">
+                                    <i class="fa fa-map-marker-alt" style="color: blue;"></i>
+                                </span>
+
+                            </div>
+                        </div>
+                        <br>
+                        <div class="card mb-3">
+                            <div class="row g-0">
+                                <div class="col-md-4 d-flex align-items-center custom-container">
+                                    <img src="img/White-Tesla-Model-S-PNG-File 2.png" class="img-fluid rounded-start"
+                                        alt="...">
+                                </div>
+                                <div class="col-md-8">
+                                    <ul class="card-body">
+                                        <li><b class="font-size-b">Trip Start Date:</b> <span
+                                                class="font-size-text">2021-06-17 10:03:40</span></li>
+                                        <li><b class="font-size-b">Trip End Date:</b> <span class="font-size-text">
+                                                2021-06-17 10:11:41</span></li>
+                                        <li><b class="font-size-b">FBT Start ODO:</b> <span class="font-size-text">
+                                                40143</span></li>
+                                        <li><b class="font-size-b">FBT End ODO:</b> <span class="font-size-text">
+                                                42206</span></li>
+                                        <li><b class="font-size-b">Trip Reason:</b> <span class="font-size-text">
+                                                1009</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 ">
+                    <div class="main-card">
+                        <div class="row">
+                            <div class="col-lg-8 d-flex align-items-center">
+
+                                <h5>ENX04M(#54566)<span class="badge"></span></h5>
+                                <span class="icon-holder1">
+                                    <i class="fa fa-map-marker-alt" style="color: blue;"></i>
+                                </span>
+
+                            </div>
+                        </div>
+                        <br>
+                        <div class="card mb-3">
+                            <div class="row g-0">
+                                <div class="col-md-4 d-flex align-items-center custom-container">
+                                    <img src="img/White-Tesla-Model-S-PNG-File 2.png" class="img-fluid rounded-start"
+                                        alt="...">
+                                </div>
+                                <div class="col-md-8">
+                                    <ul class="card-body">
+                                        <li><b class="font-size-b">Trip Start Date:</b> <span
+                                                class="font-size-text">2021-06-17 10:03:40</span></li>
+                                        <li><b class="font-size-b">Trip End Date:</b> <span class="font-size-text">
+                                                2021-06-17 10:11:41</span></li>
+                                        <li><b class="font-size-b">FBT Start ODO:</b> <span class="font-size-text">
+                                                40143</span></li>
+                                        <li><b class="font-size-b">FBT End ODO:</b> <span class="font-size-text">
+                                                42206</span></li>
+                                        <li><b class="font-size-b">Trip Reason:</b> <span class="font-size-text">
+                                                1009</span></li>
+                                    </ul>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!--Logbook End-->
+    
+
+    
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+        integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- bootstrap CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $("#rental-tab").click(function () {
+                event.preventDefault();
+                $(this).addClass("active");
+                $("#bookings-tab").removeClass("active");
+
+                // Show the rentals content and hide the bookings content
+                $("#rentals-content").show();
+                $("#bookings-content").hide();
+            });
+
+            $("#bookings-tab").click(function () {
+                event.preventDefault();
+                $(this).addClass("active");
+                $("#rental-tab").removeClass("active");
+
+                // Show the bookings content and hide the rentals content
+                $("#bookings-content").show();
+                $("#rentals-content").hide();
+            });
+        });
+        const payButton = document.getElementById("pay-button");
+        payButton.addEventListener("click", function () {
+            // Code to execute when the button is clicked
+            // For example, redirecting to another page:
+            window.location.href = "pay-notice.html";
+        });
+        const modal = document.getElementById("staticBackdrop");
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+        $(document).ready(function () { $("#dropdown-icon").click(function () { $("#dropdown-list").toggle(); }); $(document).click(function (event) { if (!$(event.target).closest("#dropdown-icon").length) { $("#dropdown-list").hide(); } }); });
+        const btn = document.getElementById("recordAccidentClaimBtn");
+  const codeDisplay = document.getElementById("codeDisplay");
+
+  btn.addEventListener("click", function() {
+    
+    if (codeDisplay.style.display === 'none') {
+        codeDisplay.style.display = 'block';
+  } else {
+    codeDisplay.style.display = 'none';
+  }
+  });
+    </script>
+
+
+</body>
+
+</html>
